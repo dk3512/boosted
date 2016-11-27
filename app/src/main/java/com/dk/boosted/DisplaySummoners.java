@@ -29,6 +29,7 @@ public class DisplaySummoners extends AppCompatActivity {
         String[] champFulls = intent.getStringArrayExtra("champFulls");
         String[] summFulls = intent.getStringArrayExtra("summFulls");
         String[] ranks = intent.getStringArrayExtra("ranks");
+        String patch = intent.getStringExtra("patch");
         Button backButton = (Button) findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,34 +40,34 @@ public class DisplaySummoners extends AppCompatActivity {
 //        Log.d("CHAMPFULLS", Arrays.toString(champFulls));
 //        Log.d("SUMMFULLS", Arrays.toString(summFulls));
         new DownloadImageTask((ImageView) findViewById(R.id.summoner1))
-                .execute("http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/" +
+                .execute("http://ddragon.leagueoflegends.com/cdn/" + patch + "/img/champion/" +
                     champFulls[0]);
         new DownloadImageTask((ImageView) findViewById(R.id.summoner2))
-                .execute("http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/" +
+                .execute("http://ddragon.leagueoflegends.com/cdn/" + patch + "/img/champion/" +
                     champFulls[1]);
         new DownloadImageTask((ImageView) findViewById(R.id.summoner3))
-                .execute("http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/" +
+                .execute("http://ddragon.leagueoflegends.com/cdn/" + patch + "/img/champion/" +
                         champFulls[2]);
         new DownloadImageTask((ImageView) findViewById(R.id.summoner4))
-                .execute("http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/" +
+                .execute("http://ddragon.leagueoflegends.com/cdn/" + patch + "/img/champion/" +
                         champFulls[3]);
         new DownloadImageTask((ImageView) findViewById(R.id.summoner5))
-                .execute("http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/" +
+                .execute("http://ddragon.leagueoflegends.com/cdn/" + patch + "/img/champion/" +
                         champFulls[4]);
         new DownloadImageTask((ImageView) findViewById(R.id.summoner6))
-                .execute("http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/" +
+                .execute("http://ddragon.leagueoflegends.com/cdn/" + patch + "/img/champion/" +
                         champFulls[5]);
         new DownloadImageTask((ImageView) findViewById(R.id.summoner7))
-                .execute("http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/" +
+                .execute("http://ddragon.leagueoflegends.com/cdn/" + patch + "/img/champion/" +
                         champFulls[6]);
         new DownloadImageTask((ImageView) findViewById(R.id.summoner8))
-                .execute("http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/" +
+                .execute("http://ddragon.leagueoflegends.com/cdn/" + patch + "/img/champion/" +
                         champFulls[7]);
         new DownloadImageTask((ImageView) findViewById(R.id.summoner9))
-                .execute("http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/" +
+                .execute("http://ddragon.leagueoflegends.com/cdn/" + patch + "/img/champion/" +
                         champFulls[8]);
         new DownloadImageTask((ImageView) findViewById(R.id.summoner10))
-                .execute("http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/" +
+                .execute("http://ddragon.leagueoflegends.com/cdn/" + patch + "/img/champion/" +
                         champFulls[9]);
         //--- text view---
         TextView sn1 = (TextView) findViewById(R.id.summName1);
